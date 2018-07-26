@@ -34,6 +34,7 @@
         android:layout_height="wrap_content"
         android:hint="密码"
         android:padding="5sp"
+        android:inputType="textPassword"
         android:gravity="center"/>
     <Button
         android:id="@+id/Btn_login"
@@ -63,6 +64,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="40dp"
         android:autoLink="all"
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 

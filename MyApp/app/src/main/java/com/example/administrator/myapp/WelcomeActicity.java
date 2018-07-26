@@ -38,11 +38,12 @@ public class WelcomeActicity extends AppCompatActivity implements ViewPager.OnPa
             public void onClick(View view) {
                 Intent intent=new Intent(WelcomeActicity.this,LoginActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
         initList();
         viewPager=findViewById(R.id.viewPager);
-        myAdapter=new MyAdapter();
+        myAdapter=new MyAdapter(list);
         viewPager.setAdapter(myAdapter);
         viewPager.setOnPageChangeListener(this);
     }
@@ -98,30 +99,5 @@ public class WelcomeActicity extends AppCompatActivity implements ViewPager.OnPa
 
     }
 
-    class MyAdapter extends PagerAdapter{
 
-        @Override
-        public int getCount() {
-            return list.size();
-        }
-
-        @Override
-        public boolean isViewFromObject(@NonNull View view, @NonNull Object o) {
-            return view==o;
-        }
-
-        @NonNull
-        @Override
-        public Object instantiateItem(@NonNull ViewGroup container, int position) {
-            ImageView imageView=list.get(position);
-            container.addView(imageView);
-            return imageView;
-        }
-
-        @Override
-        public void destroyItem(@NonNull ViewGroup container, int position, @NonNull Object object) {
-            ImageView imageView=list.get(position);
-            container.removeView(imageView);
-        }
-    }
 }

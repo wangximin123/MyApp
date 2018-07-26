@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:orientation="horizontal"
+    android:layout_margin="10dp"
+    >
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:background="@drawable/discounts_listview_item_white">
+        <View
+            android:id="@+id/discounts_leftView"
+            android:layout_width="5dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/discounts_listview_item_line_yello"
+            />
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingHorizontal="15dp"
+            android:gravity="center"
+            >
+                <TextView
+                    android:id="@+id/discounts_price"
+                    android:paddingHorizontal="15dp"
+                    android:gravity="bottom"
+                    android:text="￥8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="6"/>
+                <TextView
+                    android:id="@+id/discounts_type"
+                    android:paddingHorizontal="15dp"
+                    android:gravity="top"
+                    android:text="立减券"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="5" />
+        </LinearLayout>
+
+        <View
+            android:layout_marginVertical="7dp"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#000000"/>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/discounts_title"
+                android:layout_marginLeft="5dp"
+                android:text="家政洗衣按摩美业芬"
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:textSize="15sp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_marginTop="2dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:src="@drawable/clock"/>
+                <TextView
+                    android:id="@+id/discounts_data"
+                    android:layout_marginLeft="2dp"
+                    android:text="2016.03.02-2016.03.31有效"
+                    android:textSize="10sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="12dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <Button
+        android:id="@+id/discounts_rightBtn"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="5dp"
+        android:gravity="center"
+        android:text="立\n即\n领\n取"
+        android:layout_gravity="right"
+        android:layout_width="40dp"
+        android:layout_height="match_parent"
+        android:background="@drawable/discounts_listview_item_last"
+        />
+
+</LinearLayout>

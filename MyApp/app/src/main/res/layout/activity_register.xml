@@ -63,6 +63,7 @@
             android:background="@drawable/reigster_textview"
             >
             <EditText
+                android:id="@+id/Edit_phone"
                 android:hint="手机(你的手机号)"
                 android:layout_width="match_parent"
                 android:layout_height="55dp"
@@ -78,6 +79,7 @@
         android:orientation="horizontal"
         android:background="@drawable/reigster_textview">
         <EditText
+            android:id="@+id/Edit_noteCode"
             android:hint="短信验证码"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -87,6 +89,7 @@
             android:background="@null"
              />
         <Button
+            android:id="@+id/Btn_noteCode"
             android:layout_margin="2dp"
             android:text="自动获取验证码"
             android:layout_width="wrap_content"
@@ -102,12 +105,14 @@
             android:background="@drawable/reigster_textview"
             >
             <EditText
+                android:id="@+id/Edit_pass"
                 android:hint="密码"
                 android:layout_width="match_parent"
                 android:layout_height="55dp"
                 android:background="@null"
                 android:paddingLeft="10dp"
                 android:textSize="15sp"
+                android:inputType="textPassword"
                 />
         </LinearLayout>
         <LinearLayout
@@ -116,12 +121,14 @@
             android:background="@drawable/reigster_textview"
             >
             <EditText
+                android:id="@+id/Edit_oncepass"
                 android:hint="确认密码"
                 android:layout_width="match_parent"
                 android:layout_height="55dp"
                 android:background="@drawable/reigster_textview"
                 android:paddingLeft="10dp"
                 android:textSize="15sp"
+                android:inputType="textPassword"
                 />
         </LinearLayout>
 
@@ -135,6 +142,7 @@
         android:text="我已阅读GlocalMe用户协议"/>
     
     <Button
+        android:id="@+id/Btn_register"
         android:textSize="15sp"
         android:textColor="#ffffff"
         android:text="注册"

@@ -5,8 +5,140 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="#61c2e2"
-    android:orientation="vertical">
+    android:background="#f2e881"
+    android:orientation="vertical"
+    >
+    <TextView
+        android:text="指挥交通模拟题"
+        android:gravity="center"
+        android:background="#e7dede"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingHorizontal="20dp"
+        android:orientation="vertical">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/Vp_title"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginVertical="10dp"
+        android:layout_marginHorizontal="5dp"
+        android:background="#a38f8f"></android.support.v4.view.ViewPager>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+
+            android:orientation="horizontal">
+            <Button
+                android:text="公交出行"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:background="#3eaff1"
+                android:layout_margin="5dp"/>
+            <Button
+                android:id="@+id/Btn_dezhoujiaotong"
+                android:background="#3eaff1"
+                android:text="徐州交通"
+                android:textColor="#ffffff"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="5dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+
+            android:orientation="horizontal">
+            <Button
+                android:text="天气"
+                android:background="#2c892c"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="5dp"/>
+            <Button
+                android:background="#81a4c9"
+                android:text="个人信息管理"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:layout_margin="5dp"/>
+            <Button
+                android:text="打车信息"
+                android:background="#e172bc"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="5dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/Btn_shenghuoyouhuiquan"
+            android:text="生活优惠券"
+            android:background="#3eaff1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="5dp"/>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1">
+            <Button
+                android:text="出行朋友圈"
+                android:background="#9dc999"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_margin="5dp"/>
+            <Button
+                android:text="市内路况"
+                android:textColor="#ffffff"
+                android:background="#9dc999"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_margin="5dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="@drawable/map"
+            android:layout_margin="5dp"
+            >
+
+            <TextView
+                android:text="我的位置"
+                android:layout_marginTop="0dp"
+                android:background="#3eaff1"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="bottom"/>
+        </LinearLayout>
 
 
+
+    </LinearLayout>
+    <TextView
+        android:gravity="center"
+        android:text="摇一摇退出登录"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+    </LinearLayout>
 </LinearLayout>
