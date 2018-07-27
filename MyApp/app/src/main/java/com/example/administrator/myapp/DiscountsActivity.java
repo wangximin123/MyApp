@@ -2,6 +2,7 @@ package com.example.administrator.myapp;
 
 import android.content.Context;
 import android.graphics.Color;
+import android.os.Environment;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -18,20 +19,28 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.example.administrator.myapp.util.MusicUtil;
+
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DiscountsActivity extends AppCompatActivity {
+public class DiscountsActivity extends BasicActivity {
     ListView listView;
     List<Discounts> list=new ArrayList<Discounts>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_discounts);
+        initMusic();
         findViews();
         initList();;
         DiscountsListViewAdapter discountsListViewAdapter=new DiscountsListViewAdapter(this,0,list);
         listView.setAdapter(discountsListViewAdapter);
+    }
+    private void initMusic() {
+        File file=new File(Environment.getExternalStorageDirectory(),"MyApp/musicDiscounts.mp3");
+        MusicUtil.listenerMusic(file);
     }
     void initList(){
         Discounts d1=new Discounts(8,Discounts.GET_IMMEDIATELY,"家政洗衣按摩美业芬","2016.03.02-2016.03.31有效");
@@ -40,11 +49,13 @@ public class DiscountsActivity extends AppCompatActivity {
         Discounts d4=new Discounts(15,Discounts.GET_SATISFY,"家政洗衣按摩美业芬","2016.03.02-2016.03.31有效");
         Discounts d5=new Discounts(6,Discounts.GET_SATISFY,"家政洗衣按摩美业芬","2016.03.02-2016.03.31有效");
         Discounts d6=new Discounts(100,Discounts.GET_SATISFY,"家政洗衣按摩美业芬","2016.03.02-2016.03.31有效");
+        Discounts d7=new Discounts(85,Discounts.GET_SATISFY,"家政洗衣按摩美业芬","2016.03.02-2016.03.31有效");
         list.add(d1);
         list.add(d2);
         list.add(d3);
         list.add(d4);
         list.add(d5);
+        list.add(d6);
         list.add(d6);
     }
     void findViews(){
@@ -94,7 +105,7 @@ public class DiscountsActivity extends AppCompatActivity {
 
             }else {
                 myHolder.discounts_leftView.setBackgroundResource(R.drawable.discounts_listview_item_line_red);
-                myHolder.discounts_price.setText(Html.fromHtml("<font color='#f21307' size='15'>¥</font><font color='#f2bf07' size='20'>"+price+"</font>"));
+                myHolder.discounts_price.setText(Html.fromHtml("<font color='#f21307' size='15'>¥</font><font color='#f21307' size='20'>"+price+"</font>"));
 
                 myHolder.discounts_rightBtn.setTextColor(getResources().getColor(R.color.discountsRed));
             }

@@ -9,6 +9,13 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        packagingOptions {
+            exclude 'assets/amap_bus.png'
+            exclude 'assets/amap_car.png'
+            exclude 'assets/amap_end.png'
+            exclude 'assets/amap_man.png'
+            exclude 'assets/amap_start.png'
+        }
     }
     buildTypes {
         release {
@@ -18,6 +25,7 @@ android {
     }
 }
 
+
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'com.android.support:appcompat-v7:28.0.0-alpha3'
@@ -26,5 +34,4 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
-    implementation files('libs/Android_Map3D_SDK_V6.3.0_20180619.jar')
 }

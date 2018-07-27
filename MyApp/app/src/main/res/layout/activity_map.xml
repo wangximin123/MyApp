@@ -1,12 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MapActivity">
-<com.amap.api.maps.MapView
-    android:id="@+id/mapView"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"></com.amap.api.maps.MapView>
-</android.support.constraint.ConstraintLayout>
+    tools:context=".CarActivity"
+    android:orientation="vertical"
+    android:background="#f1f1f1">
+    <com.amap.api.maps2d.MapView
+        android:layout_marginTop="50dp"
+        android:id="@+id/mapView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"></com.amap.api.maps2d.MapView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:orientation="vertical">
+        <Button
+            android:id="@+id/Btn_huoqu"
+            android:text="获取目标位置"
+            android:layout_marginTop="40dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/discounts_listview_item_white"/>
+        <Button
+            android:id="@+id/Btn_dingwei"
+            android:text="定位自身位置"
+            android:layout_marginTop="30dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/discounts_listview_item_white"/>
+    </LinearLayout>
+</LinearLayout>

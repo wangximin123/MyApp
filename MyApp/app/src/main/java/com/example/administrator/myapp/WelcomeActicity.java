@@ -1,6 +1,7 @@
 package com.example.administrator.myapp;
 
 import android.content.Intent;
+import android.os.Environment;
 import android.support.annotation.NonNull;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
@@ -16,6 +17,7 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
 import java.util.ArrayList;
+import java.util.EventListener;
 import java.util.List;
 
 public class WelcomeActicity extends AppCompatActivity implements ViewPager.OnPageChangeListener {
@@ -30,6 +32,7 @@ public class WelcomeActicity extends AppCompatActivity implements ViewPager.OnPa
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome_acticity);
+        Log.d("result1", Environment.getExternalStorageDirectory().getPath());
         paint_contain=findViewById(R.id.Point_contain);
         selectPoint=findViewById(R.id.selectPoint);
         wel_button=findViewById(R.id.wel_button);

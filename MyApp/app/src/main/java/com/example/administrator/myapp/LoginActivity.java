@@ -62,7 +62,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             @Override
             public void run() {
 
-                String s= HttpUtil.sendRequest("http://192.168.120.2:8080/account.json");
+                String s= HttpUtil.sendRequest("http://192.168.3.81:8080/account.json");
                 Log.d("result",s);
                 try {
                     JSONArray array=new JSONArray(s);

@@ -1,5 +1,6 @@
 package com.example.administrator.myapp;
 
+import android.os.Environment;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -18,10 +19,13 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 
+import com.example.administrator.myapp.util.MusicUtil;
+
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
-public class NewsActicity extends AppCompatActivity {
+public class NewsActicity extends BasicActivity {
     RecyclerView recyclerView;
     ViewPager viewPager;
     ListView listView;
@@ -34,6 +38,7 @@ public class NewsActicity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_news_acticity);
+        initMusic();
         findViews();
         initList();
         RecyclerAdapter recyclerAdapter=new RecyclerAdapter(list);
@@ -42,6 +47,10 @@ public class NewsActicity extends AppCompatActivity {
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(recyclerAdapter);
         initFragment(new NewsFragment());
+    }
+    private void initMusic() {
+        File file=new File(Environment.getExternalStorageDirectory(),"MyApp/musicNews.mp3");
+        MusicUtil.listenerMusic(file);
     }
     void initFragment(Fragment fragment){
         fragmentManager = getSupportFragmentManager();
